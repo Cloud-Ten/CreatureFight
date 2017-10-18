@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Pikachu extends Creature
 {
-    /**
-     * method will scale pikachu down to a smaller size and adds the healthbar.
-     */
+    private Creature enemy;
+    private String enemyType;
+
     public Pikachu( World w )
     {
         super(700, 2);
@@ -26,10 +26,29 @@ public class Pikachu extends Creature
     {
         // Add your action code here.
         CreatureWorld playerWorld = (CreatureWorld)getWorld();
+
         if( getHealthBar().getCurrent() <= 0)
         {
-            getWorld().showText("Pikachu has fainted...", getWorld().getWidth()/2, getWorld().getHeight()/2 + 26);
+            getWorld().showText( "Pikachu has fainted...", getWorld().getWidth() / 2, getWorld().getHeight() / 2 + 26 );
             Greenfoot.delay(100);
         }
     }    
+    
+    public void attack( int idx )
+    {
+        CreatureWorld world = (CreatureWorld)getWorld();
+        
+        enemy = world.getPlayerOne();
+        enemyType = enemy.getType();
+        
+        if( idx == 0 )
+        {
+            enemy.getHealthBar().add( -30 );
+        }
+        else
+        {
+            enemy.getHealthBar().add( -65 );
+        }
+        world.setTurnNumber(1);
+    }
 }

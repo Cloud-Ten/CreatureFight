@@ -11,18 +11,20 @@ public class Creature extends Actor
     private HealthBar creatureBar; 
     private int healthNumber;
     private int playerOwnership;
+    private String type;
+    
     /**
      * Default constructor for objects of the Creature class
      * 
      * @param There are no parameters
      * @return an object of the Creature class
      */
-    public Creature()
+    public Creature( String creatureType )
     {
         healthNumber = 500;
         playerOwnership = 0;
         creatureBar = new HealthBar(healthNumber, healthNumber, 10);
-      
+        type = creatureType;
     }
 
     /**
@@ -40,23 +42,21 @@ public class Creature extends Actor
         
         
     }
-    
-    /**
-     * returns creaturebar variable
-     */
-    protected HealthBar getHealthBar()
+
+    HealthBar getHealthBar()
     {
         return creatureBar;
     }
     
-    /**
-     * returns player ownership variable
-     */
     public int getPlayerOwnership()
     {
         return playerOwnership;
     }
     
+    public String getType()
+    {
+        return type;
+    }
         
     /**
      * attack is the code that is run when the Creature attacks its enemy
@@ -64,7 +64,7 @@ public class Creature extends Actor
      * @param There are no parameters
      * @return Nothing is returned
      */
-    public void attack()
+    public void attack( int idx )
     {
         //empty method that will get overriden in subclasses
     }

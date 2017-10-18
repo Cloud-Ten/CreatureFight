@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Charmander extends Creature
 {
-    /**
-     * method will scale charmander down to a smaller size and adds the healthbar.
-     */
+    private Creature enemy;
+    private String enemyType;
+    
     public Charmander( World w )
     {
         super(700, 1);
@@ -26,10 +26,29 @@ public class Charmander extends Creature
     {
         // Add your action code here.
         CreatureWorld playerWorld = (CreatureWorld)getWorld();
+
         if( getHealthBar().getCurrent() <= 0)
         {
             getWorld().showText("Charmander has fainted…", getWorld().getWidth()/2, getWorld().getHeight()/2 + 26);
             Greenfoot.delay(100);
         }
     }    
+    
+    public void attack( int idx )
+    {
+        CreatureWorld world = (CreatureWorld)getWorld();
+        
+        enemy = world.getPlayerTwo();
+        enemyType = enemy.getType();
+        
+        if( idx == 0 )
+        {
+            enemy.getHealthBar().add( -25 );
+        }
+        else
+        {
+            enemy.getHealthBar().add( -70 );
+        }
+        world.setTurnNumber(2);
+    }
 }
