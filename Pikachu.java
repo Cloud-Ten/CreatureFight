@@ -13,7 +13,7 @@ public class Pikachu extends Creature
 
     public Pikachu( World w )
     {
-        super(700, 2);
+        super(650, 2, "Electric");
         getImage().scale(150, 100);
         w.addObject( getHealthBar(), 450, w.getHeight() - 680 );
     }

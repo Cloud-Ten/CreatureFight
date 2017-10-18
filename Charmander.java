@@ -13,7 +13,7 @@ public class Charmander extends Creature
     
     public Charmander( World w )
     {
-        super(700, 1);
+        super(700, 1, "Fire");
         getImage().scale(150, 100);
         w.addObject( getHealthBar(), 300, w.getHeight() - 50 );
     }

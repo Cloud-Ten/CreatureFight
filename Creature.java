@@ -19,12 +19,12 @@ public class Creature extends Actor
      * @param There are no parameters
      * @return an object of the Creature class
      */
-    public Creature( String creatureType )
+    public Creature()
     {
         healthNumber = 500;
         playerOwnership = 0;
         creatureBar = new HealthBar(healthNumber, healthNumber, 10);
-        type = creatureType;
+        type = "";
     }
 
     /**
@@ -34,12 +34,12 @@ public class Creature extends Actor
      * @param whichPlayer discusses whether the creature belongs to player 1 or player 2
      * @return an object of the Creature class
      */
-    public Creature( int health, int whichPlayer )
+    public Creature( int health, int whichPlayer, String creatureType )
     {
         healthNumber = health;
         playerOwnership = whichPlayer;
         creatureBar = new HealthBar (healthNumber, healthNumber,  10);
-        
+        type = creatureType;
         
     }
 
