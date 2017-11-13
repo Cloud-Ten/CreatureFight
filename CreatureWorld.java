@@ -8,7 +8,7 @@ import java.util.List;
  * Course: CS20S
  * Teacher: Mr. Hardman
  * Lab #3, Program #1
- * Date Last Modified: 11/9/2017
+ * Date Last Modified: 11/13/2017
  *
  */
 public class CreatureWorld extends World
