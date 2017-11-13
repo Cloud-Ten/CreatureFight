@@ -62,7 +62,7 @@ public class Menu extends Actor
     {
         CreatureWorld world = (CreatureWorld)getWorld();
         
-        if( world.getTurnNumber() == 1 )
+        if( world.getPlayerOneTurn() == true )
         {
             if(titleBar.getText().equalsIgnoreCase("Fight"))
             {

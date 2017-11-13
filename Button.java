@@ -98,21 +98,10 @@ public class Button extends Actor
     {
         // Add your action code here.
         
-        CreatureWorld world = (CreatureWorld)getWorld();
-        Creature enemy;
-        
-        if( getObjectsInRange(425, Creature.class).get(0).getPlayerOwnership() == 1)
-        {
-            enemy = world.getPlayerTwo();
-        }
-        else
-        {
-            enemy = world.getPlayerOne();
-        }
-        
+        HealthBar health = (HealthBar)getWorld().getObjects(HealthBar.class).get(0);
+
         if( Greenfoot.mousePressed(this) )
         {
-            
             setImage( buttonImage2 );
             justClicked = true;
         }
@@ -123,7 +112,7 @@ public class Button extends Actor
             if( justClicked == true )
             {
                 //need to add something here
-                enemy.getHealthBar().add( value );
+                health.add( value );
                 justClicked = false;
             }
         }
