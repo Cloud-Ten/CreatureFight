@@ -68,6 +68,28 @@ public class Creature extends Actor
     {
         //empty method that will get overriden in subclasses
     }
+    
+    /**
+     * attack is the code that is run when the Creature attacks its enemy
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
+    public void switchCreature( int idx )
+    {
+        //empty method that will get overriden in subclasses
+    }
+    
+    /**
+     * attack is the code that is run when the Creature attacks its enemy
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
+    public void switchedIn()
+    {
+        //empty method that will get overriden in subclasses
+    }
 
     /**
      * act will complete actions that the Creature object should
