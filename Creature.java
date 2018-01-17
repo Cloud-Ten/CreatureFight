@@ -42,17 +42,35 @@ public class Creature extends Actor
         type = creatureType;
         
     }
-
+    
+    /**
+     * getHealthBar returns the current healthbar for a given creature
+     * 
+     * @param no parameters
+     * @return a variable that represents healthbar
+     */
     HealthBar getHealthBar()
     {
         return creatureBar;
     }
     
+    /**
+     * getWhetherPlayerOne returns if the creature calling this method is playerone or not
+     * 
+     * @param no parameters
+     * @return a variable that represents playeronecreature
+     */
     public boolean getWhetherPlayerOne()
     {
         return playerOneCreature;
     }
     
+    /**
+     * getType returns the type of the creature calling this method
+     * 
+     * @param no parameters
+     * @return a variable that represents the creature type
+     */
     public String getType()
     {
         return type;

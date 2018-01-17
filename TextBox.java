@@ -29,6 +29,12 @@ public class TextBox extends Actor
         display();
     }
     
+    /**
+     * display will set the image of textbox to the user's choice
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     private void display()
     {
         if( border == true )
@@ -39,11 +45,23 @@ public class TextBox extends Actor
         setImage( img );
     }
     
+    /**
+     * getText returns the current text displayed
+     * 
+     * @param no parameters
+     * @return a variable that represents the the text the user wants displayed
+     */
     public String getText()
     {
         return text;
     }
     
+    /**
+     * setText sets the current image to whatever the user chooses
+     * 
+     * @param a variable representing the message the user wants displayed
+     * @return nothing is returned
+     */
     public void setText( String message )
     {
         text = message;

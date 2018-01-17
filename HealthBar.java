@@ -86,8 +86,10 @@ public class HealthBar extends Actor
     }
 
     /**
-     * Act - do whatever the HealthBar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act animates healthbar by changing the current health and updating the image
+     * 
+     * @param there are no parameters
+     * @return nothing is returned
      */
     public void act()
     {
@@ -116,7 +118,6 @@ public class HealthBar extends Actor
 
     /**
      * updateBar updates the image of the health bar when the current health
-     * changes values
      * 
      * @param There are no parameters
      * @return Nothing is returned

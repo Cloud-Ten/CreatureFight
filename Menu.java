@@ -58,6 +58,12 @@ public class Menu extends Actor
         handleMouse();
     }
     
+    /**
+     * handleMouse handles what each button in the menu does if it's clicked by the user
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     private void handleMouse()
     {
         CreatureWorld world = (CreatureWorld)getWorld();

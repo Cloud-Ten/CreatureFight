@@ -50,6 +50,13 @@ public class CreatureWorld extends World
         Greenfoot.start();
     }
     
+    /**
+     * prepareCreatures adds the current playerone and playertwo creatures at
+     * specified coordinates
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     private void prepareCreatures()
     {
         for(int i = 0; i < playerOneCreatures.length; i++)
@@ -78,7 +85,13 @@ public class CreatureWorld extends World
             }
         }
     }
-
+    
+    /**
+     * getPlayerOne returns the current playerone creature for use in other code or for user info
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     public Creature getPlayerOne()
     {
         Creature currentPlayerOne;
@@ -96,7 +109,13 @@ public class CreatureWorld extends World
         }
         return currentPlayerOne;
     }
-
+    
+    /**
+     * getPlayerTwo returns the current playertwo creature for use in other code or for user info
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     public Creature getPlayerTwo()
     {
         Creature currentPlayerTwo;
@@ -115,6 +134,12 @@ public class CreatureWorld extends World
         return currentPlayerTwo;
     }
     
+    /**
+     * changePlayerOne switches out playerone's menus for a new set of menus for playerone's current creature
+     * 
+     * @param a string variable that is changed in other code
+     * @return nothing is returned
+     */
     public void changePlayerOne( String creature )
     {
         playerOneCreature = creature;
@@ -125,6 +150,12 @@ public class CreatureWorld extends World
         playerOneMenusAdded = false;
     }
     
+    /**
+     * changePlayerTwo switches out playertwo's menus for a new set of menus for playertwo's current creature
+     * 
+     * @param a string variable that is changed in other code
+     * @return nothing is returned
+     */
     public void changePlayerTwo( String creature )
     {
         playerTwoCreature = creature;
@@ -135,21 +166,45 @@ public class CreatureWorld extends World
         playerTwoMenusAdded = false;
     }
     
+    /**
+     * getNewOneCreature returns the current playerone creature out of it's array with the specified index
+     * 
+     * @param index represents the number in which what the playeronecreatures array gets
+     * @return an array with playerone's creatures
+     */
     public Creature getNewOneCreature( int index )
     {
         return playerOneCreatures[index];
     }
     
+    /**
+     * getNewOTwoCreature returns the current playertwo creature out of it's array with the specified index
+     * 
+     * @param index represents the number in which what the playertwocreatures array gets
+     * @return an array with playertwo's creatures
+     */
     public Creature getNewTwoCreature( int index )
     {
         return playerTwoCreatures[index];
     }
     
+    /**
+     * start returns a boolean representing if start is true or not
+     * 
+     * @param no parameters
+     * @return a boolean variable for use in the act method
+     */
     public boolean start()
     {
         return start;
     }
     
+    /**
+     * setTurn change if it is playerone's turn or not
+     * 
+     * @param a boolean that is changed in other code
+     * @return nothing is returned
+     */
     public void setTurn( boolean turn )
     {
         playerOneTurn = turn;

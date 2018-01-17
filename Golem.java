@@ -53,6 +53,12 @@ public class Golem extends Creature
         }
     }    
     
+    /**
+     * attack changes the amount of health in the enemy health bar under a certain set of conditions
+     * 
+     * @param a variable that gets changed whenever the user clicks a button in the menu
+     * @return nothing is returned
+     */
     public void attack( int idx )
     {
         CreatureWorld world = (CreatureWorld)getWorld();
@@ -87,6 +93,12 @@ public class Golem extends Creature
         world.setTurn(false);
     }
     
+    /**
+     * attackAnimation will animate golem by setting the location of it's image to a certain point
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     private void attackAnimation()
     {
         int originalX = getX();
@@ -101,6 +113,12 @@ public class Golem extends Creature
         setLocation(originalX, originalY);
     }
     
+    /**
+     * switchCreature switches out this current creature to another creature of the user's choice
+     * 
+     * @param a variable that gets changed when the user clicks a button in the menu
+     * @return nothing is returned
+     */
     public void switchCreature( int idx )
     {
         CreatureWorld world = (CreatureWorld)getWorld();
@@ -143,6 +161,13 @@ public class Golem extends Creature
         }
     }
     
+    /**
+     * switchedIn will move golem in to a specific point in the world if the user
+     * is switching to charmander from another creature
+     * 
+     * @param no parameters
+     * @return nothing is returned
+     */
     public void switchedIn()
     {
         getImage().setTransparency(255);
